@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.getElementById("navMenu");
 
   navToggle.addEventListener("click", () => {
+    // Proste przełączanie widoczności menu na mobile
     if (navMenu.style.display === "flex") {
       navMenu.style.display = "none";
     } else {
@@ -18,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add("active");
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); 
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.1 }); 
 
   animatedSections.forEach(section => {
     observer.observe(section);
