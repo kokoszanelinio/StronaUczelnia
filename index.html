@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WSP Wrocław – Przykładowa Nowoczesna Strona</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- GŁÓWNY NAGŁÓWEK STRONY -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <!-- Wstaw swoje logo lub tekst -->
+        <a href="#">WSP Wrocław</a>
+      </div>
+      <div class="navbar__menu" id="navMenu">
+        <ul>
+          <li><a href="#aktualnosci">Aktualności</a></li>
+          <li><a href="#o-uczelni">O Uczelni</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <!-- Hamburger menu dla widoku mobilnego -->
+      <div class="navbar__toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- Sekcja hero (baner główny) -->
+    <div class="hero">
+      <h1>Witamy w WSP Wrocław!</h1>
+      <p>Uczelnia przyszłości w sercu Dolnego Śląska</p>
+      <a href="#" class="btn-hero">Poznaj naszą ofertę</a>
+    </div>
+  </header>
+
+  <!-- SEKCJA AKTUALNOŚCI -->
+  <section id="aktualnosci" class="section">
+    <div class="container">
+      <h2>Aktualności</h2>
+      <div class="news-grid">
+        <article class="news-item">
+          <img src="https://via.placeholder.com/400x250" alt="Wydarzenie 1" />
+          <h3>Konferencja Naukowa</h3>
+          <p>
+            Już 15 kwietnia odbędzie się ogólnopolska konferencja, podczas której omówimy najnowsze wyniki badań w zakresie ekonomii i zarządzania.
+          </p>
+          <a href="#">Czytaj więcej</a>
+        </article>
+        <article class="news-item">
+          <img src="https://via.placeholder.com/400x250" alt="Wydarzenie 2" />
+          <h3>Dni Otwarte</h3>
+          <p>
+            Zapraszamy kandydatów na studia oraz wszystkich zainteresowanych do odwiedzenia naszej uczelni podczas Dni Otwartych – 20 i 21 maja.
+          </p>
+          <a href="#">Czytaj więcej</a>
+        </article>
+        <article class="news-item">
+          <img src="https://via.placeholder.com/400x250" alt="Wydarzenie 3" />
+          <h3>Nowe Kierunki Studiów</h3>
+          <p>
+            Od przyszłego roku akademickiego startujemy z nowym kierunkiem: Informatyka Stosowana w Biznesie. Zapraszamy do rekrutacji!
+          </p>
+          <a href="#">Czytaj więcej</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKCJA O UCZELNI -->
+  <section id="o-uczelni" class="section section--gray">
+    <div class="container">
+      <h2>O Nas</h2>
+      <p>
+        WSP Wrocław to nowoczesna uczelnia zlokalizowana w centrum Wrocławia. Naszą misją jest kształcenie przyszłych liderów biznesu i nauki. 
+        Dysponujemy nowoczesną infrastrukturą, doświadczoną kadrą naukową oraz szeroką ofertą kierunków studiów dopasowaną do potrzeb rynku.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEKCJA GALERIA -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <h2>Galeria</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 1" />
+        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 2" />
+        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 3" />
+        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKCJA KONTAKT -->
+  <section id="kontakt" class="section section--gray">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p><strong>Adres:</strong> ul. Przykładowa 123, 50-500 Wrocław</p>
+          <p><strong>Telefon:</strong> +48 123 456 789</p>
+          <p><strong>Email:</strong> kontakt@wsp-wroclaw.pl</p>
+        </div>
+        <div class="contact-form">
+          <form>
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Wyślij</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOPKA STRONY -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 WSP Wrocław. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
