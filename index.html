@@ -2,16 +2,19 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WSP Wrocław – Przykładowa Nowoczesna Strona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WSP Wrocław – Zaawansowana Strona</title>
+  <!-- Google Fonts – przykładowe -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Arkusz stylów -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- GŁÓWNY NAGŁÓWEK STRONY -->
-  <header>
-    <nav class="navbar">
+  <!-- Nawigacja -->
+  <header class="header">
+    <nav class="navbar container">
       <div class="navbar__logo">
-        <!-- Wstaw swoje logo lub tekst -->
         <a href="#">WSP Wrocław</a>
       </div>
       <div class="navbar__menu" id="navMenu">
@@ -22,84 +25,92 @@
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
-      <!-- Hamburger menu dla widoku mobilnego -->
+      <!-- Hamburger -->
       <div class="navbar__toggle" id="navToggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </nav>
-    <!-- Sekcja hero (baner główny) -->
+    <!-- Baner hero z efektem parallax -->
     <div class="hero">
-      <h1>Witamy w WSP Wrocław!</h1>
-      <p>Uczelnia przyszłości w sercu Dolnego Śląska</p>
-      <a href="#" class="btn-hero">Poznaj naszą ofertę</a>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1>Witamy w WSP Wrocław!</h1>
+        <p>Uczelnia przyszłości w sercu Dolnego Śląska</p>
+        <a href="#aktualnosci" class="btn btn-hero">Poznaj naszą ofertę</a>
+      </div>
     </div>
   </header>
 
-  <!-- SEKCJA AKTUALNOŚCI -->
-  <section id="aktualnosci" class="section">
+  <!-- Sekcja Aktualności -->
+  <section id="aktualnosci" class="section fade-in">
     <div class="container">
       <h2>Aktualności</h2>
-      <div class="news-grid">
-        <article class="news-item">
-          <img src="https://via.placeholder.com/400x250" alt="Wydarzenie 1" />
-          <h3>Konferencja Naukowa</h3>
-          <p>
-            Już 15 kwietnia odbędzie się ogólnopolska konferencja, podczas której omówimy najnowsze wyniki badań w zakresie ekonomii i zarządzania.
-          </p>
-          <a href="#">Czytaj więcej</a>
+      <div class="cards">
+        <article class="card">
+          <img src="https://picsum.photos/400/250?random=1" alt="Konferencja 1" />
+          <div class="card__content">
+            <h3>Konferencja Naukowa</h3>
+            <p>15 kwietnia odbędzie się ogólnopolska konferencja, podczas której omówimy najnowsze wyniki badań w zakresie ekonomii i zarządzania.</p>
+            <a href="#" class="btn btn-secondary">Czytaj więcej</a>
+          </div>
         </article>
-        <article class="news-item">
-          <img src="https://via.placeholder.com/400x250" alt="Wydarzenie 2" />
-          <h3>Dni Otwarte</h3>
-          <p>
-            Zapraszamy kandydatów na studia oraz wszystkich zainteresowanych do odwiedzenia naszej uczelni podczas Dni Otwartych – 20 i 21 maja.
-          </p>
-          <a href="#">Czytaj więcej</a>
+        <article class="card">
+          <img src="https://picsum.photos/400/250?random=2" alt="Konferencja 2" />
+          <div class="card__content">
+            <h3>Dni Otwarte</h3>
+            <p>Zapraszamy wszystkich zainteresowanych do odwiedzenia naszej uczelni podczas Dni Otwartych – 20 i 21 maja.</p>
+            <a href="#" class="btn btn-secondary">Czytaj więcej</a>
+          </div>
         </article>
-        <article class="news-item">
-          <img src="https://via.placeholder.com/400x250" alt="Wydarzenie 3" />
-          <h3>Nowe Kierunki Studiów</h3>
-          <p>
-            Od przyszłego roku akademickiego startujemy z nowym kierunkiem: Informatyka Stosowana w Biznesie. Zapraszamy do rekrutacji!
-          </p>
-          <a href="#">Czytaj więcej</a>
+        <article class="card">
+          <img src="https://picsum.photos/400/250?random=3" alt="Konferencja 3" />
+          <div class="card__content">
+            <h3>Nowe Kierunki Studiów</h3>
+            <p>Od przyszłego roku akademickiego startujemy z nowym kierunkiem: Informatyka Stosowana w Biznesie. Zapraszamy do rekrutacji!</p>
+            <a href="#" class="btn btn-secondary">Czytaj więcej</a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- SEKCJA O UCZELNI -->
-  <section id="o-uczelni" class="section section--gray">
+  <!-- Sekcja O Uczelni -->
+  <section id="o-uczelni" class="section section--gray slide-in-left">
     <div class="container">
       <h2>O Nas</h2>
       <p>
-        WSP Wrocław to nowoczesna uczelnia zlokalizowana w centrum Wrocławia. Naszą misją jest kształcenie przyszłych liderów biznesu i nauki. 
-        Dysponujemy nowoczesną infrastrukturą, doświadczoną kadrą naukową oraz szeroką ofertą kierunków studiów dopasowaną do potrzeb rynku.
+        WSP Wrocław to nowoczesna uczelnia zlokalizowana w centrum Wrocławia. 
+        Naszą misją jest kształcenie przyszłych liderów biznesu i nauki. 
+        Dysponujemy nowoczesną infrastrukturą, doświadczoną kadrą naukową oraz szeroką ofertą kierunków studiów 
+        dopasowaną do potrzeb rynku.
       </p>
     </div>
   </section>
 
-  <!-- SEKCJA GALERIA -->
-  <section id="galeria" class="section">
+  <!-- Sekcja Galeria -->
+  <section id="galeria" class="section fade-in">
     <div class="container">
       <h2>Galeria</h2>
       <div class="gallery-grid">
-        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 1" />
-        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 2" />
-        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 3" />
-        <img src="https://via.placeholder.com/300x200" alt="Zdjęcie 4" />
+        <img src="https://picsum.photos/300/200?random=4" alt="Zdjęcie 1" />
+        <img src="https://picsum.photos/300/200?random=5" alt="Zdjęcie 2" />
+        <img src="https://picsum.photos/300/200?random=6" alt="Zdjęcie 3" />
+        <img src="https://picsum.photos/300/200?random=7" alt="Zdjęcie 4" />
+        <img src="https://picsum.photos/300/200?random=8" alt="Zdjęcie 5" />
+        <img src="https://picsum.photos/300/200?random=9" alt="Zdjęcie 6" />
       </div>
     </div>
   </section>
 
-  <!-- SEKCJA KONTAKT -->
-  <section id="kontakt" class="section section--gray">
+  <!-- Sekcja Kontakt -->
+  <section id="kontakt" class="section section--gray slide-in-right">
     <div class="container">
       <h2>Kontakt</h2>
       <div class="contact-wrapper">
         <div class="contact-info">
+          <h3>Dział Obsługi Studentów</h3>
           <p><strong>Adres:</strong> ul. Przykładowa 123, 50-500 Wrocław</p>
           <p><strong>Telefon:</strong> +48 123 456 789</p>
           <p><strong>Email:</strong> kontakt@wsp-wroclaw.pl</p>
@@ -115,20 +126,21 @@
             <label for="message">Wiadomość:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Wyślij</button>
+            <button type="submit" class="btn">Wyślij</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STOPKA STRONY -->
-  <footer>
+  <!-- Stopka -->
+  <footer class="footer">
     <div class="container">
       <p>&copy; 2025 WSP Wrocław. Wszelkie prawa zastrzeżone.</p>
     </div>
   </footer>
 
+  <!-- Skrypt główny -->
   <script src="main.js"></script>
 </body>
 </html>
