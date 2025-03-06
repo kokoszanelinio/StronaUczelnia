@@ -328,6 +328,6 @@ a {
   }
   .hero {
     height: 60vh;
-    background-attachment: scroll; /* Wyłącz parallax na mobile, by uniknąć błędów */
+    background-attachment: scroll; /* Wyłącz parallax na mobile */
   }
 }
