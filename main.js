@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Hamburger menu - przełączanie
+  // Hamburger menu
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
 
   navToggle.addEventListener("click", () => {
+    // Przełączanie widoczności menu w widoku mobilnym
     if (navMenu.style.display === "flex") {
       navMenu.style.display = "none";
     } else {
@@ -11,19 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Intersection Observer – animacje sekcji przy scrollu
-  const animatedSections = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right");
+  // Prosta animacja fade-in przy scrollu (Intersection Observer)
+  const fadeElements = document.querySelectorAll(".fade-in");
 
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        observer.unobserve(entry.target); 
+        obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
-  animatedSections.forEach(section => {
-    observer.observe(section);
-  });
+  fadeElements.forEach(el => observer.observe(el));
 });
