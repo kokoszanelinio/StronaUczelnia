@@ -1,99 +1,84 @@
-/* ------------------------------
-   RESET + PODSTAWY
------------------------------- */
+/* ------------------
+   RESET / PODSTAWY
+------------------ */
 * {
-  margin: 0; 
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Używamy fontów z Google Fonts: Montserrat + Poppins */
 body {
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  color: #fff;
-  background: linear-gradient(to bottom right, #212121, #2d2d2d);
-  overflow-x: hidden; /* by nie pojawiał się scroll poziomy */
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #000;
 }
 
-/* Główne kontenery */
+/* Linki */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Kontener */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Linki */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Przyciski */
 .btn {
   display: inline-block;
-  padding: 0.9rem 1.5rem;
+  padding: 0.65rem 1.2rem;
+  border: 2px solid #000;
   border-radius: 50px;
-  background: #ffcc00; /* intensywny żółty */
+  background: transparent;
   color: #000;
   font-weight: 600;
+  cursor: pointer;
   transition: 0.3s;
 }
 .btn:hover {
-  filter: brightness(0.9);
-}
-
-.btn-hero {
-  background: #ff3d00; /* pomarańczowo-czerwony do hero */
+  background: #000;
   color: #fff;
-  text-transform: uppercase;
+}
+.minimal-btn {
+  border-color: #007cff;
+  color: #007cff;
+}
+.minimal-btn:hover {
+  background: #007cff;
+  color: #fff;
 }
 
-/* -------------- 
+/* ------------------
    HEADER / NAV
--------------- */
+------------------ */
 .header {
-  position: relative;
-  z-index: 10;
+  border-bottom: 1px solid #eee;
 }
 
-/* Nawigacja */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 0;
-  /* tło w stylu glassmorphism */
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  align-items: center;
+  padding: 1rem 0;
 }
+
 .navbar__logo a {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffcc00;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
+
 .navbar__menu ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 2rem;
 }
+
 .navbar__menu ul li a {
-  color: #fff;
   font-weight: 300;
   position: relative;
-}
-.navbar__menu ul li a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #ffcc00;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  transition: 0.3s;
-}
-.navbar__menu ul li a:hover::after {
-  width: 100%;
 }
 
 /* Hamburger (mobile) */
@@ -105,229 +90,175 @@ a {
 .navbar__toggle span {
   width: 25px;
   height: 3px;
-  margin: 4px 0;
-  background: #fff;
+  margin: 3px 0;
+  background: #000;
 }
 
-/* -------------- 
-   HERO 
--------------- */
+/* ------------------
+   HERO - MINIMAL
+------------------ */
 .hero {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  /* Parallax tło */
-  background: url('https://picsum.photos/1920/1080?random=50') center/cover no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.hero__overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; 
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
-.hero__content {
-  position: relative;
-  z-index: 1;
+  padding: 4rem 0;
   text-align: center;
+  border-bottom: 1px solid #eee;
 }
 .hero__content h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
 }
 .hero__content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-/* -------------- 
-   SEKCJE 
--------------- */
+/* ------------------
+   SEKCJA
+------------------ */
 .section {
   padding: 4rem 0;
 }
-.section--gray {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(2px);
-  margin: 2rem 0;
-  border-radius: 10px;
-}
 .section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
-/* Aktualności (karty) */
+/* Karty aktualności */
 .cards {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 .card {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  transition: 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
 }
 .card img {
   width: 100%;
-  object-fit: cover;
+  display: block;
 }
 .card__content {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .card__content h3 {
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  margin-bottom: 0.7rem;
 }
 .card__content p {
-  margin-bottom: 1rem;
+  font-size: 0.95rem;
   line-height: 1.4;
-}
-
-/* Przyciski w kartach */
-.btn-secondary {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 50px;
-  font-weight: 500;
-}
-.btn-secondary:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Galeria */
-.gallery-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  color: #333;
 }
 
 /* Kontakt */
-.contact-wrapper {
+.contact {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
-}
-.contact-info {
-  flex: 1;
-  min-width: 280px;
-  font-size: 0.95rem;
-}
-.contact-info p {
-  margin: 0.8rem 0;
-}
-.contact-info i {
-  margin-right: 0.5rem;
-  color: #ffcc00;
+  gap: 3rem;
 }
 
-.contact-form {
+/* Lewy blok informacji */
+.contact__info {
   flex: 1;
-  min-width: 280px;
+  min-width: 250px;
 }
-.contact-form form {
+
+/* Tzw. breadcrumb */
+.contact__breadcrumb {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #777;
+}
+.contact__breadcrumb a {
+  color: #777;
+}
+
+/* Kolumny kontaktu */
+.contact__columns {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 2rem;
 }
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  color: #000;
+.contact__column {
+  flex: 1;
+  min-width: 200px;
 }
-.contact-form button {
-  border: none;
+.contact__column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+/* Prawy blok - mapa */
+.contact__map {
+  flex: 1;
+  min-width: 250px;
+}
+.contact__map h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.map-wrapper {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 /* Stopka */
 .footer {
-  background: rgba(0,0,0,0.2);
-  backdrop-filter: blur(5px);
-  text-align: center;
   padding: 2rem 0;
-  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  text-align: center;
 }
 .footer p {
   font-size: 0.9rem;
+  color: #666;
 }
 
-/* -------------- 
-   ANIMACJE przy scrollowaniu
--------------- */
-.fade-in, .slide-in-left, .slide-in-right {
+/* ------------------
+   Animacje (opcjonalne)
+------------------ */
+.fade-in {
   opacity: 0;
   transform: translateY(20px);
 }
-.slide-in-left {
-  transform: translateX(-50px);
-}
-.slide-in-right {
-  transform: translateX(50px);
-}
 .active {
-  animation: fadeSlideIn 1s forwards cubic-bezier(.25,.8,.25,1);
+  animation: fadeInUp 0.7s forwards ease-in-out;
 }
-@keyframes fadeSlideIn {
+@keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translate(0,0);
+    transform: translateY(0);
   }
 }
 
-/* -------------- 
-   RESPONSYWNOŚĆ (mobile)
--------------- */
+/* ------------------
+   Responsywność
+------------------ */
 @media (max-width: 768px) {
-  /* Menu mobilne */
   .navbar__menu {
     display: none;
     position: absolute;
-    top: 65px; 
     right: 0;
-    background: rgba(0,0,0,0.95);
-    flex-direction: column;
+    top: 60px;
     width: 100%;
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .navbar__menu ul {
+    background: #fff;
     flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
+    padding: 1rem;
+    border-top: 1px solid #eee;
   }
   .navbar__toggle {
     display: flex;
   }
-  .hero {
-    height: 60vh;
-    background-attachment: scroll; /* Wyłącz parallax na mobile */
+  .navbar__menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact {
+    flex-direction: column;
   }
 }
