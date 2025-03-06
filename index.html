@@ -2,27 +2,19 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WSP Wrocław – Nowoczesna Strona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WSP Wrocław – Minimalistyczna Strona</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@400;700&display=swap" 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" 
     rel="stylesheet"
   >
-  <!-- Font Awesome (ikony) - STABILNA WERSJA 6.3.0 -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-2NYY5msPUp83KMWv4VUWZeBgQNdxBL+QuDEzTWE28Sc9Nc8m77rQSt4u4wU3+O6rER9FdbtJBbz79nCaj+o1Kw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
   <!-- Arkusz stylów -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAGŁÓWEK / NAWIGACJA -->
+  <!-- NAGŁÓWEK -->
   <header class="header">
     <nav class="navbar container">
       <div class="navbar__logo">
@@ -32,7 +24,6 @@
         <ul>
           <li><a href="#aktualnosci">Aktualności</a></li>
           <li><a href="#o-uczelni">O Uczelni</a></li>
-          <li><a href="#galeria">Galeria</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
@@ -42,117 +33,99 @@
         <span></span>
       </div>
     </nav>
-
-    <!-- SEKCJA HERO z tłem (parallax) -->
-    <section class="hero">
-      <div class="hero__overlay"></div>
-      <div class="hero__content">
-        <h1>Witamy w WSP Wrocław!</h1>
-        <p>Uczelnia przyszłości w sercu Dolnego Śląska</p>
-        <a href="#aktualnosci" class="btn btn-hero">Poznaj naszą ofertę</a>
-      </div>
-    </section>
   </header>
 
-  <!-- SEKCJA AKTUALNOŚCI -->
+  <!-- SEKCJA HERO - prosta, białe tło / subtelny obraz / minimalizm -->
+  <section class="hero">
+    <div class="container hero__content">
+      <h1>Witamy w WSP Wrocław!</h1>
+      <p>Uczelnia przyszłości w sercu Dolnego Śląska</p>
+    </div>
+  </section>
+
+  <!-- AKTUALNOŚCI -->
   <section id="aktualnosci" class="section fade-in">
     <div class="container">
       <h2>Aktualności</h2>
       <div class="cards">
         <article class="card">
-          <img src="https://picsum.photos/400/250?random=1" alt="Wydarzenie 1" />
+          <img src="https://picsum.photos/600/400?random=1" alt="Wydarzenie 1" />
           <div class="card__content">
             <h3>Konferencja Naukowa</h3>
             <p>
-              15 kwietnia odbędzie się ogólnopolska konferencja, 
+              Już 15 kwietnia odbędzie się ogólnopolska konferencja, 
               podczas której omówimy najnowsze wyniki badań w ekonomii i zarządzaniu.
             </p>
-            <a href="#" class="btn btn-secondary">Czytaj więcej</a>
           </div>
         </article>
         <article class="card">
-          <img src="https://picsum.photos/400/250?random=2" alt="Wydarzenie 2" />
+          <img src="https://picsum.photos/600/400?random=2" alt="Wydarzenie 2" />
           <div class="card__content">
             <h3>Dni Otwarte</h3>
             <p>
-              Zapraszamy wszystkich zainteresowanych do odwiedzenia naszej uczelni 
-              podczas Dni Otwartych – 20 i 21 maja.
+              Zapraszamy do odwiedzenia uczelni podczas Dni Otwartych – 20 i 21 maja.
             </p>
-            <a href="#" class="btn btn-secondary">Czytaj więcej</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://picsum.photos/400/250?random=3" alt="Wydarzenie 3" />
-          <div class="card__content">
-            <h3>Nowe Kierunki Studiów</h3>
-            <p>
-              Od przyszłego roku akademickiego startujemy z nowym kierunkiem: 
-              Informatyka Stosowana w Biznesie. Zapraszamy do rekrutacji!
-            </p>
-            <a href="#" class="btn btn-secondary">Czytaj więcej</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- SEKCJA O UCZELNI -->
-  <section id="o-uczelni" class="section section--gray slide-in-left">
+  <!-- O UCZELNI -->
+  <section id="o-uczelni" class="section fade-in">
     <div class="container">
-      <h2>O Nas</h2>
+      <h2>O Uczelni</h2>
       <p>
         WSP Wrocław to nowoczesna uczelnia zlokalizowana w centrum Wrocławia. 
         Naszą misją jest kształcenie przyszłych liderów biznesu i nauki. 
         Dysponujemy nowoczesną infrastrukturą, doświadczoną kadrą naukową 
         oraz szeroką ofertą kierunków studiów dopasowaną do potrzeb rynku.
       </p>
-      <p>
-        Stawiamy na innowacyjność, współpracę z biznesem oraz kształcenie 
-        w oparciu o praktyczne umiejętności, które ułatwią start w nowoczesnej gospodarce.
-      </p>
     </div>
   </section>
 
-  <!-- SEKCJA GALERIA -->
-  <section id="galeria" class="section fade-in">
-    <div class="container">
-      <h2>Galeria</h2>
-      <div class="gallery-grid">
-        <img src="https://picsum.photos/300/200?random=4" alt="Galeria 1" />
-        <img src="https://picsum.photos/300/200?random=5" alt="Galeria 2" />
-        <img src="https://picsum.photos/300/200?random=6" alt="Galeria 3" />
-        <img src="https://picsum.photos/300/200?random=7" alt="Galeria 4" />
-        <img src="https://picsum.photos/300/200?random=8" alt="Galeria 5" />
-        <img src="https://picsum.photos/300/200?random=9" alt="Galeria 6" />
-      </div>
-    </div>
-  </section>
-
-  <!-- SEKCJA KONTAKT -->
-  <section id="kontakt" class="section section--gray slide-in-right">
-    <div class="container">
-      <h2>Kontakt</h2>
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Dział Obsługi Studentów</h3>
-          <p><i class="fas fa-map-marker-alt"></i> ul. Przykładowa 123, 50-500 Wrocław</p>
-          <p><i class="fas fa-phone-alt"></i> +48 123 456 789</p>
-          <p><i class="fas fa-envelope"></i> kontakt@wsp-wroclaw.pl</p>
-          <p>Godziny otwarcia: pn-pt 8:00-16:00</p>
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section fade-in">
+    <div class="container contact">
+      <div class="contact__info">
+        <!-- breadcrumb / link / dowolnie -->
+        <p class="contact__breadcrumb">
+          <a href="#">Strona główna</a> > <a href="#kontakt">Kontakt</a>
+        </p>
+        
+        <h2>Kontakt</h2>
+        
+        <div class="contact__columns">
+          <div class="contact__column">
+            <h3>Biuro</h3>
+            <p>ul. Zygmunta Nowa 3<br>50-500 Wrocław<br>tel.: +48 123 456 789<br>email: biuro@wsp-wroclaw.pl</p>
+            
+            <!-- Przykładowy przycisk np. do pobrania PDF -->
+            <a href="#" class="btn minimal-btn">Pobierz nasz poradnik</a>
+          </div>
+          <div class="contact__column">
+            <h3>Sprzedaż</h3>
+            <p>tel.: +48 123 442 432<br>email: sprzedaz@wsp-wroclaw.pl</p>
+          </div>
+          <div class="contact__column">
+            <h3>Opieka</h3>
+            <p>tel.: +48 423 442 412<br>email: opieka@wsp-wroclaw.pl</p>
+          </div>
         </div>
-        <div class="contact-form">
-          <form>
-            <label for="name">Imię i nazwisko:</label>
-            <input type="text" id="name" name="name" required />
+      </div>
 
-            <label for="email">Adres e-mail:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Wiadomość:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit" class="btn">Wyślij</button>
-          </form>
+      <div class="contact__map">
+        <h3>Znajdź nas na mapie</h3>
+        <!-- Wstaw swój osadzony kod Google Maps -->
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.2542027032177!2d17.028400232849184!3d51.10916888701753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc243139af941%3A0xa719aa668f49dbe9!2sWroc%C5%82aw!5e0!3m2!1spl!2spl!4v1670000000000" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen 
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -165,7 +138,7 @@
     </div>
   </footer>
 
-  <!-- Główny skrypt JS -->
+  <!-- Skrypt główny -->
   <script src="main.js"></script>
 </body>
 </html>
